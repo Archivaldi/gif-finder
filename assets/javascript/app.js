@@ -1,7 +1,6 @@
-var gifQ;
 $(document).on("click", "button", function () {
     $("#gif-view").empty();
-    gifQ = $(this).val();
+    var gifQ = $(this).val();
     var gifURL = "https://api.giphy.com/v1/gifs/search?api_key=30JspaJIb3w1ZakLhJQZgtog3Z26m3mp&q="+gifQ+"&limit=25&offset=0&rating=G&lang=en";
     $.ajax({
         url: gifURL,

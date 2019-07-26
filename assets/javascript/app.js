@@ -8,9 +8,9 @@ $(document).on("click", "button", function () {
     }).then(function(response){
         for(var i = 0; i < 11; i++) {
             $("#gif-view").append("<img>");
-            $("img").css("width", "400px");
-            $("img").css("height", "300px");
-            $("img").css("margin", "20px");
+            // $("img").css("width", "400px");
+            // $("img").css("height", "300px");
+            // $("img").css("margin", "20px");
             $("#gif-view img:last-child").attr("src", response.data[i].images.downsized_still.url);
             $("#gif-view img:last-child").attr("data-moving", response.data[i].images.downsized_large.url);
             $("#gif-view img:last-child").attr("data-static", response.data[i].images.downsized_still.url);

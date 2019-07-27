@@ -29,12 +29,12 @@ $("input[type=submit]").on("click", function() {
 });
 
 $(document).on("click", "img", function() {
-    var firstSRC = $(this).attr("data-static");
-    var anotherSRC = $(this).attr("data-moving");
+    var staticSRC = $(this).attr("data-static");
+    var movingSRC = $(this).attr("data-moving");
     var actualSRC = $(this).attr("src");
-    if (actualSRC == firstSRC){
-        $(this).attr("src", anotherSRC );
+    if (actualSRC == staticSRC){
+        $(this).attr("src", movingSRC );
     } else {
-        $(this).attr("src", firstSRC );
+        $(this).attr("src", staticSRC );
     }
 })

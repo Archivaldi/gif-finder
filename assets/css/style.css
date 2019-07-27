@@ -5,4 +5,12 @@ button {
     width: 400px;
     height: 300px;
     margin: 20px;
+    margin-bottom: 0;
+}
+.divWithGif {
+    display: inline-block;
+}
+.divWithGif span {
+    display: block;
+    text-align: center;
 }

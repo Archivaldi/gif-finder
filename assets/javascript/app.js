@@ -1,4 +1,6 @@
-var limit = 10;
+var limit = 10; // limit for searching gifs
+
+//create 10 gifs if we clicked on new button
 $(document).on("click", ".createGifs", function () {
     limit = 10;
     $("#gif-view").empty();
@@ -26,6 +28,7 @@ $(document).on("click", ".createGifs", function () {
     });
 });
 
+//create +10 gif everytime when we click "give me more" button
 $("#more").on("click", function () {
     if (limit == 0) {
         console.log("Put the value");
@@ -55,7 +58,7 @@ $("#more").on("click", function () {
     }
 })
 
-
+//function for adding new animal into search list
 $("input[type=submit]").on("click", function () {
     var newAnimal = $("input[type=text]").val();
     $("#buttons").append("<button>");
@@ -64,6 +67,7 @@ $("input[type=submit]").on("click", function () {
     event.preventDefault();
 });
 
+//swithing between static and moving gifs
 $(document).on("click", "img", function () {
     var staticSRC = $(this).attr("data-static");
     var movingSRC = $(this).attr("data-moving");

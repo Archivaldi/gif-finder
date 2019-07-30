@@ -32,6 +32,7 @@ $(document).on("click", "img", function() {
     var staticSRC = $(this).attr("data-static");
     var movingSRC = $(this).attr("data-moving");
     var actualSRC = $(this).attr("src");
+    
     if (actualSRC == staticSRC){
         $(this).attr("src", movingSRC );
     } else {

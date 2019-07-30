@@ -1,4 +1,4 @@
-var limit = 0;
+var limit = 10;
 $(document).on("click", ".createGifs", function () {
     limit = 10;
     $("#gif-view").empty();

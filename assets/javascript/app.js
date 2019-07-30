@@ -6,7 +6,7 @@ $(document).on("click", "button", function () {
         url: gifURL,
         method: "GET"
     }).then(function(response){
-        for(var i = 0; i < 11; i++) {
+        for(var i = 0; i <= 10; i++) {
             $("#gif-view").append("<div>");
             $("#gif-view div:last-child").attr("class", "divWithGif");
             $("#gif-view div:last-child").append("<img>");

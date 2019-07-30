@@ -4,32 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">\
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Gif-Finder</title>
 
 
 </head>
 
 <body>
-    <div class="container">
-            <div id="buttons">
-                    <button value="Cats">Cats</button>
-                    <button value="Dogs">Dogs</button>
-                    <button value="Pengiun">Pengiun</button>
-                    <button value="Tiger">Tiger</button>
-                    <button value="Lama">Lama</button>
-                </div>
-                <form>
-                    <label for="search-gif">Add an animal:</label>
-                    <input id="search-gif" type="text">
-                    <input type="submit" value="Add an animal">
-                </form>
-                <div id="gif-view"></div>
-            
-            
+    <div class="jumbotron text-center">
+        <h1>Gif-Finder</h1>
+        <h2>Take a minute for fun!</h2>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-12 text-center">
+                    <div id="buttons">
+                            <button value="Cats">Cats</button>
+                            <button value="Dogs">Dogs</button>
+                            <button value="Pengiun">Pengiun</button>
+                            <button value="Tiger">Tiger</button>
+                            <button value="Lama">Lama</button>
+                        </div>
+                        <form>
+                            <label for="search-gif">Add an animal:</label>
+                            <input id="search-gif" type="text">
+                            <input type="submit" value="Add an animal">
+                        </form>
+            </div>
+            <div id="gif-view" class="col-lg-9 col-md-8 col-sm-12 text-center"></div>
+
+        </div>
+
     </div>
 
 

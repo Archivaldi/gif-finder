@@ -63,6 +63,7 @@ $("input[type=submit]").on("click", function () {
     var newAnimal = $("input[type=text]").val();
     $("#buttons").append("<button>");
     $("#buttons button:last-child").attr("value", newAnimal);
+    $("#buttons button:last-child").attr("class", "createGifs");
     $("#buttons button:last-child").text(newAnimal);
     event.preventDefault();
 });

@@ -17,7 +17,10 @@ $(document).on("click", ".createGifs", function () {
             $(".divWithGif img:last-child").attr("data-moving", response.data[i].images.downsized_large.url);
             $(".divWithGif img:last-child").attr("data-static", response.data[i].images.downsized_still.url);
             $(".divWithGif:last-child").append("<span>");
+            $(".divWithGif span:last-child").text(response.data[i].title);
+            $(".divWithGif:last-child").append("<span>");
             $(".divWithGif span:last-child").text("Rating " + response.data[i].rating);
+            debugger;
 
         }
     });

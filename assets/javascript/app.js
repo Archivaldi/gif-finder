@@ -10,19 +10,19 @@ $(document).on("click", ".createGifs", function () {
         url: gifURL,
         method: "GET"
     }).then(function (response) {
-        for (var i = 0; i <= 10; i++) {
+        for (var i = 0; i < limit; i++) {
             $("#gif-view").append("<div>");
             $("#gif-view div:last-child").attr("class", "divWithGif");
             $("#gif-view div:last-child").append("<img>");
-            $(".divWithGif img:last-child").attr("value", gifQ);
-            $(".divWithGif img:last-child").attr("src", response.data[i].images.downsized_still.url);
-            $(".divWithGif img:last-child").attr("data-moving", response.data[i].images.downsized_large.url);
-            $(".divWithGif img:last-child").attr("data-static", response.data[i].images.downsized_still.url);
-            $(".divWithGif:last-child").append("<span>");
-            $(".divWithGif span:last-child").text(response.data[i].title);
-            $(".divWithGif:last-child").append("<span>");
-            $(".divWithGif span:last-child").text("Rating " + response.data[i].rating);
-            debugger;
+            $("#gif-view div:last-child img:last-child").attr("value", gifQ);
+            $("#gif-view div:last-child img:last-child").attr("src", response.data[i].images.downsized_still.url);
+            $("#gif-view div:last-child img:last-child").attr("data-moving", response.data[i].images.downsized_large.url);
+            $("#gif-view div:last-child img:last-child").attr("data-static", response.data[i].images.downsized_still.url);
+            $("#gif-view div:last-child").append("<span>");
+            $("#gif-view div:last-child span:last-child").text(response.data[i].title);
+            $("#gif-view div:last-child").append("<span>");
+            $("#gif-view div:last-child span:last-child").text("Rating " + response.data[i].rating);
+
 
         }
     });
@@ -41,17 +41,18 @@ $("#more").on("click", function () {
             url: gifURL,
             method: "GET"
         }).then(function (response) {
-            for (var i = startSearchNum; i < limit; i++) {
+            for (var i = startSearchNum + 1; i < limit; i++) {
                 $("#gif-view").append("<div>");
                 $("#gif-view div:last-child").attr("class", "divWithGif");
                 $("#gif-view div:last-child").append("<img>");
-                $(".divWithGif img:last-child").attr("src", response.data[i].images.downsized_still.url);
-                $(".divWithGif img:last-child").attr("value", gifQ);
-                $(".divWithGif img:last-child").attr("data-moving", response.data[i].images.downsized_large.url);
-                $(".divWithGif img:last-child").attr("data-static", response.data[i].images.downsized_still.url);
-                $(".divWithGif:last-child").append("<span>");
-                $(".divWithGif span:last-child").text("Rating " + response.data[i].rating);
-
+                $("#gif-view div:last-child img:last-child").attr("value", gifQ);
+                $("#gif-view div:last-child img:last-child").attr("src", response.data[i].images.downsized_still.url);
+                $("#gif-view div:last-child img:last-child").attr("data-moving", response.data[i].images.downsized_large.url);
+                $("#gif-view div:last-child img:last-child").attr("data-static", response.data[i].images.downsized_still.url);
+                $("#gif-view div:last-child").append("<span>");
+                $("#gif-view div:last-child span:last-child").text(response.data[i].title);
+                $("#gif-view div:last-child").append("<span>");
+                $("#gif-view div:last-child span:last-child").text("Rating " + response.data[i].rating);
 
             }
         });

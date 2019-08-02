@@ -13,7 +13,13 @@ firebase.initializeApp(config);
 //Get a reference to the database service
 var database = firebase.database();
 
-var favorites = [];
+var favorites;
+
+if (snapshot.val().favoriteGifs) {
+    favorites = snapshot.val().favoriteGifs;
+} else {
+    favorites =[];
+}
 
 
 var limit = 10; // limit for searching gifs

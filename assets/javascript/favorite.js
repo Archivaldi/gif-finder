@@ -15,10 +15,8 @@ var database = firebase.database();
 
 database.ref().on("value", function(snapshot) {
     $("div").empty();
-    for (var i = 0; i < snapshot.favoriteGifs.length; i++){
-        console.log(snapshot.favoriteGifs);
+    for (var i = 0; i < snapshot.numChildren(); i++){
         $("div").append("<img>");
-        console.log(favoriteGifs[i]);
-        $("div img:last-child").attr("src", favoriteGifs[i]);
+        $("div img:last-child").attr("src", snapshot.val().favoriteGifs[i]);
     }
 });

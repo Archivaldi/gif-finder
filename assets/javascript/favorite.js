@@ -13,10 +13,8 @@ firebase.initializeApp(firebaseConfig);
 // Get a reference to the database service
 var database = firebase.database();
 
-database.ref().on("value", function(snapshot) {
-    $("div").empty();
-    for (var i = 0; i < snapshot.numChildren(); i++){
-        $("div").append("<img>");
-        $("div img:last-child").attr("src", snapshot.val().favoriteGifs[i]);
-    }
+database.ref().on("child_added", function (snapshot) {
+    var data = snapshot.val();
+        var img = $("<img>").attr("src", data.favoriteGif);
+        $("div").append(img);
 });

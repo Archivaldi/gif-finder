@@ -13,13 +13,17 @@ firebase.initializeApp(config);
 //Get a reference to the database service
 var database = firebase.database();
 
-var favorites;
+var favorites = [];
 
-if (snapshot.val().favoriteGifs) {
-    favorites = snapshot.val().favoriteGifs;
-} else {
-    favorites =[];
-}
+// database.ref().on("value", function(snapshot){
+//     var value = snapshot.val();
+//     debugger;
+//     if (snapshot.val().favoriteGifs) {
+//         favorites = snapshot.val().favoriteGifs;
+//     } else {
+//         favorites =[];
+//     }
+// });
 
 
 var limit = 10; // limit for searching gifs
@@ -107,8 +111,8 @@ $(document).on("click", "img", function () {
 })
 
 $(document).on("dblclick", "img", function(){
-    favorites.push($(this).attr("data-moving"));
-    database.ref().set({
-        favoriteGifs: favorites
+    var newImg = $(this).attr("data-moving");
+    database.ref().push({
+        favoriteGif: newImg
       });
 })

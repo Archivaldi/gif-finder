@@ -22,6 +22,7 @@
     <div>
         <div class="row">
             <div class="col-lg-3 col-md-4 col-sm-12 text-center">
+                <a href="favorites.html">My favorite Gifs</a>
                 <div id="buttons">
                     <button class="createGifs" value="Cats">Cats</button>
                     <button class="createGifs" value="Dogs">Dogs</button>
@@ -35,7 +36,10 @@
                     <input id="search-gif" type="text">
                     <input type="submit" value="Add an animal">
                 </form>
+                <br>
                 <button id="more">Give me more!</button>
+                <br>
+                <button id="pushIntoFavorite">My Favorite Gifs</button>
             </div>
             <div id="gif-view" class="col-lg-9 col-md-8 col-sm-12 text-center"></div>
 
@@ -43,6 +47,8 @@
 
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>

@@ -8,7 +8,7 @@ button {
     margin-bottom: 0;
 }
 .divWithGif {
-    display: inline-block;
+    display: inline-block; 
 }
 .divWithGif span {
     display: block;

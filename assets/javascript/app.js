@@ -80,4 +80,4 @@ $(document).on("click", "img", function () {
     } else {
         $(this).attr("src", staticSRC);
     }
-})
+}) 

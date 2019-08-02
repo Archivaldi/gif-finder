@@ -17,4 +17,4 @@ database.ref().on("child_added", function (snapshot) {
     var data = snapshot.val();
         var img = $("<img>").attr("src", data.favoriteGif);
         $("div").append(img);
-}); 
+});

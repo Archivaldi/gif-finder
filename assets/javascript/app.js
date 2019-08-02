@@ -1,3 +1,31 @@
+var config = {
+    apiKey: "AIzaSyAXHO7kWS5V4Z81zMeyJHJcI1QYOxN8-bA",
+    authDomain: "gif-finder-7967a.firebaseapp.com",
+    databaseURL: "https://gif-finder-7967a.firebaseio.com",
+    projectId: "gif-finder-7967a",
+    storageBucket: "",
+    messagingSenderId: "619759614376",
+    appId: "1:619759614376:web:9edcb3e313100203"
+}
+
+firebase.initializeApp(config);
+
+//Get a reference to the database service
+var database = firebase.database();
+
+var favorites = [];
+
+// database.ref().on("value", function(snapshot){
+//     var value = snapshot.val();
+//     debugger;
+//     if (snapshot.val().favoriteGifs) {
+//         favorites = snapshot.val().favoriteGifs;
+//     } else {
+//         favorites =[];
+//     }
+// });
+
+
 var limit = 10; // limit for searching gifs
 
 //create 10 gifs if we clicked on new button
@@ -30,7 +58,7 @@ $(document).on("click", ".createGifs", function () {
 
 //create +10 gif everytime when we click "give me more" button
 $("#more").on("click", function () {
-    if (limit == 0) {
+    if ($("#gif-view").children().length == 0) {
         console.log("Put the value");
     } else {
         var startSearchNum = $("#gif-view").children().length;
@@ -80,4 +108,11 @@ $(document).on("click", "img", function () {
     } else {
         $(this).attr("src", staticSRC);
     }
-}) 
+})
+
+$(document).on("dblclick", "img", function(){
+    var newImg = $(this).attr("data-moving");
+    database.ref().push({
+        favoriteGif: newImg
+      });
+})

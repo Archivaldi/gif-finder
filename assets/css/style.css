@@ -28,3 +28,17 @@ h2 {
 body {
     background-color: #c5cdd1;
 }
+
+a {
+    font-family: 'Abril Fatface', cursive;
+    color: black;
+    border: 2px solid #1dc4ec;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+
+}
+#buttons {
+    margin-top: 10px;
+}
